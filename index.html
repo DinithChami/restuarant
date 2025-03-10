@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chow Haven</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- font awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -33,13 +34,82 @@
     <!-- header section ends -->
 
     <!-- search form -->
-     <form action="" id="search-form">
+    <form action="" id="search-form">
         <input type="search" placeholder="Search here..." id="search-box">
         <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
         <i class="fa-solid fa-circle-xmark" id="close"></i>
-     </form>   
+    </form> 
+     
+    <!-- Home section strat -->
+    <section class="home" id="home">
+        <div class="swiper mySwiper home-slider">
+
+            <div class="swiper-wrapper wrapper">
+
+                <div class="swiper-slide slider">
+                    <div class="content">
+                        <span>Our special dish</span>
+                        <h3>Spicy Noodles</h3>
+                        <p>Bold flavors, fiery spices, and irresistible heat in every bite!</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="./images/home-image1.png" alt="image">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slider">
+                    <div class="content">
+                        <span>Our special dish</span>
+                        <h3>BBQ Chicken</h3>
+                        <p>Juicy, tender, and perfectly grilled with a smoky, savory-sweet glaze. A flavor-packed delight in every bite!</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                    <div class="image">
+                      <img src="./images/home-image2.png" alt="image" >
+                    </div>
+                </div>
+
+                <div class="swiper-slide slider">
+                    <div class="content">
+                        <span>Our special dish</span>
+                        <h3>Hot Pizza</h3>
+                        <p>Freshly baked, loaded with gooey cheese, bold toppings, and a perfect crispy crust. Served hot and irresistibly delicious!</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="./images/home-image3.png" alt="image">
+                    </div>
+                </div>
+
+                <div class="swiper-slide slider">
+                    <div class="content">
+                        <span>Our special dish</span>
+                        <h3>Healthy Meal</h3>
+                        <p>Nutritious, delicious, and packed with fresh, wholesome ingredients to fuel your body and satisfy your taste buds!</p>
+                        <a href="#" class="btn">Order Now</a>
+                    </div>
+                    <div class="image">
+                        <img src="./images/home-image4.png" alt="image">
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    <!-- Home section end -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- custom js file link -->
-     <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
