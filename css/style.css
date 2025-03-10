@@ -53,7 +53,7 @@ header .logo i{
 
 header .navbar a{
     font-size: 1.7rem;
-    border-radius: .5rem;
+    border-radius: 2.5rem;
     padding: .5rem 1.5rem;
     color: var(--light-color);
 }
@@ -89,6 +89,69 @@ header .icons  #menu-bars{
     display: none;
 }
 
+/* search form slyle*/
+
+#search-form{
+    position: fixed;
+    top: -110%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background: rgba(0,0,0,.8);
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+#search-form.active{
+    top:0 ;
+}
+
+#search-form #search-box{
+    width:50rem;
+    border-bottom: .1rem solid #fff;
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: none;
+    background: none;
+}
+
+#search-form #search-box::placeholder{
+    color: #eee;
+}
+
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+#search-form label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+#search-form label:hover{
+    color: var(--green);
+}
+
+#search-form #close{
+    position: absolute;
+    color: #fff;
+    cursor:pointer;
+    top: 2rem; 
+    right: 3rem;
+    font-size: 3rem;
+}
+
+#search-form #close:hover{
+    color: var(--green);
+}
+
+
+
 
 /* media queries */
 @media (max-width:991px){
@@ -108,7 +171,7 @@ header .icons  #menu-bars{
         display: inline-block;
     }
 
-    header .navbar{
+    header .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -117,12 +180,14 @@ header .icons  #menu-bars{
         border-top: 1rem solid rgba(0,0,0,.2);
         border-bottom: 1rem solid rgba(0,0,0,.2);
         padding: 1rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden */
+        transition: clip-path 0.3s ease-in-out;
     }
-
-    header .navbar .active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Visible */
     }
+    
 
     header .navbar a{
         display: block;
@@ -130,6 +195,11 @@ header .icons  #menu-bars{
         margin: 1rem;
         font-size: 2rem;
         background: #eee;
+    }
+
+    #search-form #search-box{
+        width: 90%;
+        margin: 0 1rem;
     }
 }
 
