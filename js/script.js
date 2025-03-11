@@ -20,7 +20,7 @@ document.querySelector('#close').onclick = () =>{
     document.querySelector('#search-form').classList.remove('active');
 }
 
-//swiper
+//home swiper
 var swiper = new Swiper(".home-slider", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -34,3 +34,29 @@ var swiper = new Swiper(".home-slider", {
     },
     loop:true,
   });
+
+  //review swiper 
+  var swiper = new Swiper(".review-slider", {
+    spaceBetween: 20,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop:true,
+    breakpoints: {
+      0:{
+        slidersPerView: 1,
+      },
+      640:{
+        slidersPerView: 2,
+      },
+      768:{
+        slidersPerView: 2,
+      },
+      1024:{
+        slidersPerView: 3,
+      },
+    },
+  });
+
