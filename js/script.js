@@ -43,20 +43,19 @@ var swiper = new Swiper(".home-slider", {
       delay: 2500,
       disableOnInteraction: false,
     },
-    loop:true,
+    loop: true,
     breakpoints: {
-      0:{
-        slidersPerView: 1,
+      0: {
+        slidesPerView: 1,
       },
-      640:{
-        slidersPerView: 2,
+      640: {
+        slidesPerView: 2,
       },
-      768:{
-        slidersPerView: 2,
+      768: {
+        slidesPerView: 2,
       },
-      1024:{
-        slidersPerView: 3,
+      1024: {
+        slidesPerView: 3,
       },
     },
-  });
-
+});
