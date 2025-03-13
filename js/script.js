@@ -21,7 +21,7 @@ window.onscroll = () => {
       let offset = sec.offsetTop - 150;
       let id = sec.getAttribute('id');
 
-      if(top => offset && top < offset + height){
+      if(top >= offset && top < offset + height){
         navLinks.forEach(links => {
           links.classList.remove('active');
           document.querySelector('header .navbar a[href*='+id+']').classList.add('active');
@@ -78,3 +78,16 @@ var swiper = new Swiper(".home-slider", {
       },
     },
 });
+
+
+//loader part
+
+function loader() {
+  document.querySelector('.loader-container').classList.add('fade-out');
+}
+
+function fadeOut() {
+  setTimeout(loader, 2500); // Use setTimeout instead of setInterval
+}
+
+window.onload = fadeOut;

@@ -607,6 +607,32 @@ header .icons  #menu-bars{
     color: var(--green);
 }
 
+/* loader part */
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.loader-container img {
+    width: 35rem;
+}
+
+.loader-container.fade-out {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+}
 
 
 /* media queries */
